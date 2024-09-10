@@ -19,7 +19,7 @@ export default function NavFondo() {
                         <Link href={'#contactanos'} >Contáctanos</Link>
                     </div>
                 </div>
-                <div className="w-full h-full flex flex-row gap-3 justify-between items-center bg-[#044495] pl-10 pr-5 text-white text-sm">
+                <div className="w-full h-full flex flex-row gap-3 justify-between items-center bg-[#044495] pl-10 pr-5 py-2 text-white text-sm">
                     <div className="flex flex-row gap-3 items-center">
                         <Image unoptimized src={`/assets/images/nav_logo.png`} width={0} height={0} alt="Logo" className="h-[30px] w-auto " />
                     </div>
