@@ -12,11 +12,11 @@ import 'swiper/css/effect-fade';
 import Image from "next/image";
 
 export default function CaroucelPeronsajes({ images }: { images: string[] }) {
-    console.log(images)
+    /* console.log(images) */
 
     return (
         <>
-            <Swiper className="mySwiper h-full w-full" loop={true} effect={'fade'} autoplay={{ delay: 2500 }} fadeEffect={{ crossFade: true }} modules={[EffectFade, Autoplay]}>
+            <Swiper className="mySwiper h-full w-full" loop={true} effect={'fade'} autoplay={{ delay: 3000 }} fadeEffect={{ crossFade: true }} modules={[EffectFade, Autoplay]}>
                 {images.map((image, index) => (
                     <SwiperSlide className="w-full !h-full flex items-center justify-center" key={index}>
                         <center className="w-full h-full">

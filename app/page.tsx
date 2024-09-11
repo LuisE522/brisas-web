@@ -22,13 +22,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-screen bg-gradient-to-bl from-[#00765A] to-[#021F73]">
+      <div className="h-screen bg-[url('/assets/images/fondo_home.png')] bg-center bg-cover"> {/* bg-gradient-to-bl from-[#00765A] to-[#021F73] */}
         <div className="w-full h-full flex flex-col gap-5 pb-4">
-          <NavFondo />
+          {/* <NavFondo /> */}
 
-          {/* <div className="">
+          <div className="">
             <NavTransparent />
-          </div> */}
+          </div>
 
           <div className="w-full max-w-[1280px] mx-auto h-full flex flex-col gap-5">
             <div className="grid grid-cols-3 w-full h-[calc(100%-124px-20px)]">
@@ -59,7 +59,6 @@ export default function Home() {
       </div>
 
       <div className="h-screen bg-[#1f1f1f]"></div>
-      <div className="h-screen"></div>
 
     </>
 
