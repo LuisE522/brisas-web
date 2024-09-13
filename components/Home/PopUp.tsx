@@ -18,7 +18,7 @@ export default function PopUp() {
     }, [isOpen]);
 
     return (
-        <div className="relative h-screen bg-gray-200">
+        <div className="">
             {isOpen && (
                 <>
                     <div className="fixed inset-0 bg-black bg-opacity-70 z-40" />

@@ -20,6 +20,7 @@ import { API_URL } from "@/const";
 import { getAuthTokenClient } from "@/lib/getUserData";
 import { Checkbox } from "@/components/ui/checkbox"
 import { Roles } from "@/app/(panel)/admin/models/Roles";
+import { toast } from "react-toastify";
 
 
 interface Props {
@@ -49,6 +50,8 @@ export default function EditUser({ usuario, listRoles }: Props) {
 
         console.log(listUserRoles)
 
+        const editUserToast = toast.loading('Actualizando...')
+
         const userUpdate = await fetch(`${API_URL}/auth/update`, {
             method: 'PUT',
             headers: {
@@ -60,9 +63,26 @@ export default function EditUser({ usuario, listRoles }: Props) {
 
         const data = await userUpdate.json()
 
+        if (!userUpdate.ok) {
+            toast.update(editUserToast, {
+                render: 'Error al actualizar',
+                isLoading: false,
+                type: 'error',
+                autoClose: 2000
+            })
+            return null;
+        }
+
+        toast.update(editUserToast, {
+            render: 'Usuario actualizado',
+            isLoading: false,
+            type: 'success',
+            autoClose: 2000
+        })
+
     }
 
-    
+
 
     const rolCheckedChange = (rolId: number) => {
         if (listUserRoles.includes(rolId)) {
