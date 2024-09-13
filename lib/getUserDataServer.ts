@@ -36,3 +36,13 @@ export async function getUserDataServer() {
     return null;
   }
 }
+
+export function getAuthToken() {
+  const cookieStore = cookies();
+  const token = cookieStore.get("auth_token");
+
+  if (!token) return null;
+  
+  return token.value
+
+}

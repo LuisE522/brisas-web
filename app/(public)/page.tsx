@@ -1,6 +1,7 @@
 import CaroucelPeronsajes from "@/components/Home/CaroucelPeronsajes";
 import NavFondo from "@/components/Home/NavFondo";
 import NavTransparent from "@/components/Home/NavTransparent";
+import PopUp from "@/components/Home/PopUp";
 
 export default function Home() {
 
@@ -59,6 +60,8 @@ export default function Home() {
       </div>
 
       <div className="h-screen bg-[#1f1f1f]"></div>
+
+      <PopUp />
 
     </>
 

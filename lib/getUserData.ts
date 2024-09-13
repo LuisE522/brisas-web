@@ -41,3 +41,9 @@ export async function getUserData() {
         return null
     }
 }
+
+export function getAuthTokenClient() {
+    const token = hasCookie('auth_token') ? getCookie('auth_token') : null
+
+    return token;
+}

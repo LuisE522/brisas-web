@@ -17,8 +17,8 @@ async function PanelLayout({ children, }: Readonly<{ children: React.ReactNode; 
 
                 <UserProvider initialUserData={data}>
                     <div className="w-full h-full flex flex-row relative text-white">
-                        <div className="h-full fixed w-[250px] p-3">
-                            <div className={`h-full w-full flex flex-col gap-5 bg-black/40 rounded-2xl`}>
+                        <div className="h-full fixed w-[250px] ">
+                            <div className={`h-full w-full flex flex-col gap-5 bg-black/40 `}>
                                 <div className="h-[70px] w-full flex justify-center items-center border-b-2">
                                     Brisas del titicaca
                                 </div>
@@ -32,45 +32,7 @@ async function PanelLayout({ children, }: Readonly<{ children: React.ReactNode; 
                                 </div>
                             </div>
                         </div>
-                        <div className={`ml-[250px] p-4`}>
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
-                            {JSON.stringify(data)}
+                        <div className={`ml-[250px] p-4 w-full`}>
                             {children}
                         </div>
                     </div>
