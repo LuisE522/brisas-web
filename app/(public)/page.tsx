@@ -41,7 +41,7 @@ export default function Home() {
                       <Image src={'/assets/images/logo_almuerzo_show.png'} unoptimized alt="" width={0} height={0} className="w-auto h-full" />
                     </div>
                     <button className="w-fit inline-flex items-center justify-center px-8 py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FFEC00] hover:bg-[#FFEC00] transition-all duration-300 rounded-full">
-                      Reservar
+                    Reservar
                     </button>
                   </div>
                   <div className="w-full h-auto flex flex-col gap-3 justify-center items-center">
@@ -49,7 +49,7 @@ export default function Home() {
                       <Image src={'/assets/images/logo_noches_de_folklore.png'} unoptimized alt="" width={0} height={0} className="w-auto h-full" />
                     </div>
                     <button className="w-fit inline-flex items-center justify-center px-8 py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FC228A] hover:bg-[#FC228A] transition-all duration-300 rounded-full">
-                      Reservar
+                    Reservar
                     </button>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function Home() {
       </div>
 
 
-      <div className="h-screen bg-[#140107]"></div>
+      <div className="h-screen bg-[#12141C]"></div>
 
       <PopUp />
 

@@ -18,30 +18,51 @@ export default function Login() {
     const onSubmit = async (data: any) => {
         console.log(data)
 
+        const loginToast = toast.loading('Iniciando...')
+
         const dataJson = {
             'email': data.email,
             'password': data.pass
         }
 
-        const resLogin = await fetch(`${API_URL}/auth/login`, {
-            method: 'POST',
-            headers: {
-                "content-type": 'application/json'
-            },
-            body: JSON.stringify(dataJson)
-        })
+        try {
+            const resLogin = await fetch(`${API_URL}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    "content-type": 'application/json'
+                },
+                body: JSON.stringify(dataJson)
+            })
 
-        const res = await resLogin.json()
+            const res = await resLogin.json()
 
-        if (!resLogin.ok) {
-            toast.warning('Datos incorrectos',)
-            return null;
+            if (!resLogin.ok) {
+                toast.update(loginToast, {
+                    render: 'Datos incorrectos',
+                    type: 'error',
+                    isLoading: false,
+                    autoClose: 2000
+                })
+                return null;
+            }
+
+            setCookie('auth_token', res.token, { maxAge: 3600 })
+            toast.update(loginToast, {
+                render: 'Inicio de sesion correctamente',
+                type: 'success',
+                isLoading: false,
+                autoClose: 2000
+            })
+
+            router.push('/admin')
+        } catch (error: any) {
+            toast.update(loginToast, {
+                render: 'Problemas en el servidor',
+                type: 'error',
+                isLoading: false,
+                autoClose: 2000
+            })
         }
-
-        setCookie('auth_token', res.token, { maxAge: 3600 })
-        toast.success('Inicio de sesion correctamente.')
-
-        router.push('/admin')
 
 
     }

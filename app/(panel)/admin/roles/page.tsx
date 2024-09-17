@@ -1,13 +1,13 @@
-import ListUser from '@/components/Panel/User/ListUser';
+import ListRoles from '@/components/Panel/Roles/ListRoles';
 import { API_URL } from '@/const'
 import { getAuthToken } from '@/lib/getUserDataServer'
 import React from 'react'
 
-export default async function UsuariosPage() {
+export default async function RolesPage() {
 
   const token = getAuthToken();
 
-  const listUser = await fetch(`${API_URL}/auth/listuserPage`, {
+  const responseRoles = await fetch(`${API_URL}/roles/listroles`, {
     method: 'GET',
     headers: {
       "Content-Type": "application/json",
@@ -15,8 +15,9 @@ export default async function UsuariosPage() {
     },
   })
 
-  const data = await listUser.json()
-  if (!listUser.ok) {
+  const listRoles = await responseRoles.json()
+  console.log(listRoles)
+  if (!responseRoles.ok) {
     return (
       <>
         <h1>No tienes los permisos necesarios</h1>
@@ -24,7 +25,7 @@ export default async function UsuariosPage() {
     )
   }
 
-  const listRoles = await fetch(`${API_URL}/auth/listroles`, {
+  const responsePermisos = await fetch(`${API_URL}/permisos/listpermisos`, {
     method: 'GET',
     headers: {
       "Content-Type": "application/json",
@@ -32,11 +33,11 @@ export default async function UsuariosPage() {
     },
   })
 
-  const dataRoles = await listRoles.json();
+  const listPermisos = await responsePermisos.json()
 
   return (
     <>
-      <ListUser list={data} listRoles={dataRoles} />
+      <ListRoles listRoles={listRoles} listPermisos={listPermisos} />
     </>
   )
 }

@@ -25,14 +25,16 @@ import { toast } from "react-toastify";
 
 interface Props {
     usuario: ListUsers
-    listRoles: Roles[]
+    listRoles: Roles[],
+    onClose: () => void;
 }
 
-export default function EditUser({ usuario, listRoles }: Props) {
+export default function EditUser({ usuario, listRoles, onClose }: Props) {
 
     const { register, handleSubmit } = useForm()
 
-    const [dni, setDni] = useState<string>(usuario.dni)
+    const [open, setOpen] = useState(true);
+    const [dni, setDni] = useState<string>(usuario.dni ? usuario.dni : '')
     const [username, setUsername] = useState<string>(usuario.username)
     const [email, setEmail] = useState<string>(usuario.email)
     const [listUserRoles, setListUserRoles] = useState(usuario.usuarios_roles.map((usuario_soles: UsuariosRoles) => usuario_soles.idRol));
@@ -47,8 +49,6 @@ export default function EditUser({ usuario, listRoles }: Props) {
             id: usuario.id,
             listUserRoles
         }
-
-        console.log(listUserRoles)
 
         const editUserToast = toast.loading('Actualizando...')
 
@@ -65,7 +65,7 @@ export default function EditUser({ usuario, listRoles }: Props) {
 
         if (!userUpdate.ok) {
             toast.update(editUserToast, {
-                render: 'Error al actualizar',
+                render: data.message,
                 isLoading: false,
                 type: 'error',
                 autoClose: 2000
@@ -74,15 +74,13 @@ export default function EditUser({ usuario, listRoles }: Props) {
         }
 
         toast.update(editUserToast, {
-            render: 'Usuario actualizado',
+            render: data.response.message,
             isLoading: false,
             type: 'success',
             autoClose: 2000
         })
 
     }
-
-
 
     const rolCheckedChange = (rolId: number) => {
         if (listUserRoles.includes(rolId)) {
@@ -94,12 +92,17 @@ export default function EditUser({ usuario, listRoles }: Props) {
         }
     };
 
+    const closeDialog = (open: boolean) => {
+        setOpen(open)
+        onClose()
+    }
+
 
     return (
         <>
-            <Dialog>
+            <Dialog open={open} onOpenChange={(open) => closeDialog(open)}>
                 <DialogTrigger>
-                    <FaEdit size={30} className='cursor-pointer' />
+
                 </DialogTrigger>
                 <DialogContent className="dark text-white">
                     <DialogHeader>

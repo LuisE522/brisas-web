@@ -1,3 +1,10 @@
+export interface ListUsersPagination {
+    users: ListUsers[],
+    totalPages:2,
+    currentPage: number,
+    pageSize: number,
+}
+
 export interface ListUsers {
     id: number;
     username: string;
@@ -16,7 +23,7 @@ export interface UsuariosRoles {
 
 export interface Rol {
     id: number;
-    string: string;
+    nombre: string;
     permisos_roles: PermisosRoles[];
 }
 
