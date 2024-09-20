@@ -1,4 +1,6 @@
 import Footer from "@/components/Home/Footer";
+import CursorEffect from "@/components/Mouse/CursorEffect";
+import { LanguageProvider } from "@/context/LanguageProvider";
 
 export default function PublicLayout({
     children,
@@ -7,8 +9,11 @@ export default function PublicLayout({
 }>) {
     return (
         <>
-            {children}
-            <Footer />
+            <LanguageProvider>
+                {children}
+                <CursorEffect />
+                <Footer />
+            </LanguageProvider>
         </>
     );
 }

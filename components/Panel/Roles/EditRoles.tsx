@@ -98,10 +98,10 @@ export default function EditRoles({ rol, listPermisos, onClose }: Props) {
                 </DialogTrigger>
                 <DialogContent className="dark text-white">
                     <DialogHeader>
-                        <DialogTitle>Editar usuario</DialogTitle>
+                        <DialogTitle>Editar rol</DialogTitle>
                         <DialogDescription className="w-full flex flex-col pt-5 gap-5">
                             <div className="grid w-full items-center gap-1.5">
-                                <Label htmlFor="username">Username</Label>
+                                <Label htmlFor="username">Nomnbre</Label>
                                 <Input autoFocus type="text" id="username" value={nombre} onChange={(e: any) => setNombre(e.target.value)} />
                             </div>
 

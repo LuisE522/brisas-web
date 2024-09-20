@@ -86,3 +86,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* #parallax-container {
+  perspective: 1000px;
+} */
+
+#parallax_container > img {
+  will-change: transform;
+    transition: transform 0.1s; /* Suaviza el movimiento */
+    transform-origin: center; /* Asegúrate de que la rotación se vea bien */
+}
