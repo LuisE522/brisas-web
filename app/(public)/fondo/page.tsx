@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <Spline
-        scene="https://prod.spline.design/Ny1mVKo4pGWxc5gU/scene.splinecode" 
+        scene="https://prod.spline.design/koK4Dzpa-R4vJJF6/scene.splinecode" 
       />
     </main>
   );

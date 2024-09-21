@@ -1,8 +1,15 @@
 'use client'
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Page() {
+
+    const [load, setLoad] = useState(false);
+
+    useEffect(() => {
+        setLoad(true)
+    }, [])
+
     useEffect(() => {
         const parallaxContainer = document.getElementById('parallax-container');
         if (!parallaxContainer) return;
@@ -12,12 +19,12 @@ export default function Page() {
             const { clientX: mouseX, clientY: mouseY } = e;
             const { innerWidth: width, innerHeight: height } = window;
 
-            const xPos = (mouseX / width) * 20 - 10; // Ajusta el rango
-            const yPos = (mouseY / height) * 20 - 10; // Ajusta el rango
+            const xPos = (mouseX / width) * 60 - 10; // Ajusta el rango
+            const yPos = (mouseY / height) * 60 - 10; // Ajusta el rango
 
 
-            const speedFactors = [0.5, 1, 1.5, 2]; // Velocidades diferentes para cada imagen
-            const rotationFactors = [10, 10, 30, 30]; // Velocidades diferentes para cada imagen
+            const speedFactors = [0.5, 1, 1.5, 2, 3]; // Velocidades diferentes para cada imagen
+            const rotationFactors = [10, 10, 30, 30, 30]; // Velocidades diferentes para cada imagen
 
             Array.from(images).forEach((img, index) => {
                 // Calcular el ángulo de rotación basado en la posición del mouse
@@ -27,7 +34,8 @@ export default function Page() {
                 const scale = 110;
 
                 // Aplicar transformaciones
-                img.style.transform = `translate(${xPos / speed}px, ${yPos / speed}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale}%)`;
+                img.style.transform = `translate(${xPos / speed}px, ${yPos / speed}px) scale(${scale}%)`;
+                img.style.transitionDuration = '0ms'
             });
         };
 
@@ -36,14 +44,17 @@ export default function Page() {
         return () => {
             parallaxContainer.removeEventListener('mousemove', handleMouseMove);
         };
-    }, []);
+    });
+
+
 
     return (
         <div className="h-screen w-full bg-slate-900 overflow-hidden relative" id="parallax-container">
-            <img src="/assets/images/fondo_animado/1.png" alt="" className="w-full h-full object-cover scale-110 absolute -top-10 md:-top-36" />
-            <img src="/assets/images/fondo_animado/2.png" alt="" className="w-full object-cover scale-110 absolute -bottom-0 left-0" />
-            <img src="/assets/images/fondo_animado/3.png" alt="" className="w-full object-cover scale-110 absolute -bottom-0 left-0" />
-            <img src="/assets/images/fondo_animado/4.png" alt="" className="w-full object-cover scale-110 absolute -bottom-0 left-0" />
+            <img src="/assets/images/fondo_animado/1.png" alt="" className={`w-full h-full object-cover ${load == false ? 'transition-transform  duration-1000 scale-[200%]' : 'transition-transform  duration-1000 scale-110'} absolute -top-10 md:-top-36`} />
+            <img src="/assets/images/fondo_animado/2.png" alt="" className={`w-full object-cover ${load == false ? 'transition-transform  duration-1000 scale-[200%]' : 'transition-transform  duration-1000 scale-110'} absolute -bottom-0 left-0`} />
+            <img src="/assets/images/fondo_animado/3.png" alt="" className={`w-full object-cover ${load == false ? 'transition-transform  duration-1000 scale-[200%]' : 'transition-transform  duration-1000 scale-110'} absolute -bottom-0 left-0`} />
+            <img src="/assets/images/fondo_animado/4.png" alt="" className={`w-full object-cover ${load == false ? 'transition-transform  duration-1000 scale-[200%]' : 'transition-transform  duration-1000 scale-110'} absolute -bottom-0 left-0`} />
+            <img src="/assets/images/fondo_animado/5.png" alt="" className={`w-full object-cover ${load == false ? 'transition-transform  duration-1000 scale-[200%]' : 'transition-transform  duration-1000 scale-110'} absolute -bottom-0 left-0`} />
         </div>
     );
 }
