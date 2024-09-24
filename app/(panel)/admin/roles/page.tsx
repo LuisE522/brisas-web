@@ -16,7 +16,7 @@ export default async function RolesPage() {
   })
 
   const listRoles = await responseRoles.json()
-  console.log(listRoles)
+  /* console.log(listRoles) */
   if (!responseRoles.ok) {
     return (
       <>

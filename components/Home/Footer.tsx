@@ -13,7 +13,7 @@ export default function Footer() {
     const translations = trs as any
 
     return (
-        <div className="bg-[#1578BC] py-10">
+        <div className="bg-black py-10">
             <div className='max-w-[95%] w-[1080px] mx-auto flex flex-col gap-10'>
                 <div className="w-full grid grid-cols-1 lg:grid-cols-3 justify-between gap-5">
                     <Image unoptimized src={'/assets/images/nav_logo.png'} alt="Footer logo" width={0} height={0} className="h-[50px] w-auto" />

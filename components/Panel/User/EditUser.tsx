@@ -73,8 +73,10 @@ export default function EditUser({ usuario, listRoles, onClose }: Props) {
             return null;
         }
 
+        console.log(data)
+
         toast.update(editUserToast, {
-            render: data.response.message,
+            render: data.message,
             isLoading: false,
             type: 'success',
             autoClose: 2000

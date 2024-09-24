@@ -16,6 +16,7 @@ export default async function UsuariosPage() {
   })
 
   const data = await listUser.json()
+  /* console.log(data) */
   if (!listUser.ok) {
     return (
       <>
@@ -23,6 +24,7 @@ export default async function UsuariosPage() {
       </>
     )
   }
+
 
   const listRoles = await fetch(`${API_URL}/auth/listroles`, {
     method: 'GET',
@@ -33,6 +35,7 @@ export default async function UsuariosPage() {
   })
 
   const dataRoles = await listRoles.json();
+  console.log(dataRoles)
 
   return (
     <>

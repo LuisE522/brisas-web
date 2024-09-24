@@ -21,6 +21,7 @@ export default function NavTransparent() {
                 <div className="w-full text-white flex justify-center gap-5">
                     <Link href="#eventos">{translations[language].eventos}</Link>
                     <Link href="#cultural">{translations[language].cultural}</Link>
+                    <Link href="#cultural">{translations[language].nosotros}</Link>
                 </div>
                 <Image unoptimized src={`/assets/images/nav_logo.png`} width={0} height={0} alt="Logo" className="h-[60px] w-auto " />
                 <div className="hidden text-white w-full md:flex justify-between gap-3 items-center">

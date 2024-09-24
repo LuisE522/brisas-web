@@ -70,7 +70,7 @@ export default function ListUser({ list, listRoles }: Props) {
                 isLoading: false,
                 autoClose: 1000
             })
-            console.log(infoListUser)
+            /* console.log(infoListUser) */
         } catch (err) {
             toast.update(loadUserToast, {
                 render: 'Error en el servidor',
