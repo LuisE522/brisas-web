@@ -3,14 +3,14 @@ import Evento from "@/components/Evento/Evento";
 const eventoData = [
   {
     imagen: "https://cdn.joinnus.com/user/3068910/uiV7JPMHHg0u23D.png",
-    color: "#99C44F",
-    btn_color: "#3E51A2",
+    color: "99C44F",
+    btn_color: "3E51A2",
     slug: "almuerzo-show",
   },
   {
     imagen: "https://cdn.joinnus.com/user/3068910/sDoZbNGm20Nvvzx.png",
-    color: "#D066AA",
-    btn_color: "#C93513",
+    color: "D066AA",
+    btn_color: "C93513",
     slug: "noche-de-folklore",
   },
 ];

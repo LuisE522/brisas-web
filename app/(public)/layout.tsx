@@ -11,7 +11,7 @@ export default function PublicLayout({
         <>
             <LanguageProvider>
                 {children}
-                <CursorEffect />
+                {/* <CursorEffect /> */}
                 <Footer />
             </LanguageProvider>
         </>

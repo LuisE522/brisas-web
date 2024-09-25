@@ -1,6 +1,7 @@
 import PopUp from "@/components/Home/PopUp";
 import Page1 from "@/components/Home/Page1";
 import Page2 from "@/components/Home/Page2";
+import Page3 from "@/components/Home/Page3";
 
 export default function Home() {
   const i_images = [
@@ -20,15 +21,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-black">
-      {/* <Page1 d_images={d_images} i_images={i_images} /> */}
-      <Page2 d_images={d_images} i_images={i_images} />
+    <div className="w-full min-h-screen">
+      <Page1 d_images={d_images} i_images={i_images} />
+      {/* <Page2 /> */}
+      
+      {/* <Page3 d_images={d_images} i_images={i_images} /> */}
 
       {/* <div className="h-screen bg-[#12141C]"></div>
       <div className="h-screen bg-purple-500" id="purple"></div> */}
-
-      <div className="h-screen "></div>
-      <div className="h-screen" id="purple"></div>
 
       {/* <PopUp /> */}
     </div>

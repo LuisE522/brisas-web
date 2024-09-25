@@ -5,12 +5,9 @@ import NavTransparent from "./NavTransparent";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Props {
-  i_images: string[];
-  d_images: string[];
-}
 
-export default function Page2({ i_images, d_images }: Props) {
+
+export default function Page2() {
   const [load, setLoad] = useState(false);
 
   return (

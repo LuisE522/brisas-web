@@ -31,7 +31,7 @@ export default function NavTransparent() {
                     </div>
                     <div className="w-full h-full items-center gap-3 flex"> {/* justify-end */}
                         {/* <GrLanguage className='' size={25} /> */}
-                        <div className="flex flex-row gap-1 font-bold">
+                        <div className="flex flex-row gap-1 font-bold z-[99999]">
                             <span className={`cursor-pointer ${language == 'es' ? 'text-muted-foreground' : ''}`} onClick={() => changeLanguage('es')} >ESP</span>
                             <span>|</span>
                             <span className={`cursor-pointer ${language == 'en' ? 'text-muted-foreground' : ''}`} onClick={() => changeLanguage('en')} >EN</span>

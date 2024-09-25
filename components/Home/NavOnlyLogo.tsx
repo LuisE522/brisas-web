@@ -9,9 +9,9 @@ export default function NavOnlyLogo() {
             <div className="w-full flex justify-center  h-[124px] items-center">                
                 <Image unoptimized src={`/assets/images/nav_logo.png`} width={0} height={0} alt="Logo" className="h-[60px] w-auto " />                
             </div>
-            <div className="w-full flex justify-center items-center md:absolute">
+            {/* <div className="w-full flex justify-center items-center md:absolute">
                 <Image unoptimized src={`/assets/images/texto_home.png`} width={0} height={0} alt="Logo" className="h-[100px] w-auto " />                
-            </div>
+            </div> */}
         </div>
     )
 }
