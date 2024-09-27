@@ -16,7 +16,7 @@ export default function CaroucelPeronsajes({ images }: { images: string[] }) {
 
     return (
         <>
-            <Swiper className="mySwiper h-full w-full" loop={true} effect={'fade'} autoplay={{ delay: 3000 }} fadeEffect={{ crossFade: true }} modules={[EffectFade, Autoplay]}>
+            <Swiper className="mySwiper h-[50%] sm:h-[65%] md:h-[75%] xl:h-[80%] w-full" loop={true} effect={'fade'} autoplay={{ delay: 3000 }} fadeEffect={{ crossFade: true }} modules={[EffectFade, Autoplay]}>
                 {images.map((image, index) => (
                     <SwiperSlide className="w-full !h-full flex items-center justify-center" key={index}>
                         <center className="w-full h-full">

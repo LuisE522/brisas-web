@@ -18,7 +18,7 @@ export default function FondoAnimado() {
   return (
     <>
       <div
-        className="min-h-screen h-full lg:h-screen w-full bg-slate-900 overflow-hidden relative border-2"
+        className="min-h-screen h-full lg:h-screen w-full bg-slate-900 overflow-hidden relative"
         id="images-container"
       >
         {/* Imágenes de fondo */}
@@ -44,7 +44,7 @@ export default function FondoAnimado() {
             load === false
               ? "transition-transform duration-1000 scale-[250%]"
               : "transition-transform duration-1000 scale-[130%]"
-        } absolute -bottom-0 left-0`}
+          } absolute -bottom-0 left-0`}
         />
         <Image
           src="/assets/images/fondo_animado/3.png"
@@ -82,6 +82,78 @@ export default function FondoAnimado() {
               : "transition-transform duration-1000 scale-[130%]"
           } absolute -bottom-0 left-0`}
         />
+
+        {/* Fondo transparente */}
+        <div className="bg-black/60 h-full w-full absolute top-0 left-0 z-0"></div>
+        {/* Fondo transparente */}
+
+        <div className="min-h-screen h-full lg:h-screen w-full bg-center bg-cover absolute top-0 left-0 hidden md:flex">
+          <div>
+            <Image
+              unoptimized
+              src={"/assets/images/i_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/i_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/d_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/d_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+          </div>
+        </div>
+
+        <div className="w-full h-full top-0 left-0 absolute ">
+          <Image
+            unoptimized
+            src={"/assets/images/d_planta.png"}
+            alt=""
+            width={0}
+            height={0}
+            className={`${
+              loadAnimation == false ? "divOnLoad" : "divOnLoad"
+            } h-auto absolute bottom-0 right-0`}
+          />
+          <Image
+            unoptimized
+            src={"/assets/images/d_planta.png"}
+            alt=""
+            width={0}
+            height={0}
+            className={`${
+              loadAnimation == false ? "divOnLoad" : "divOnLoad"
+            } scale-x-[-1] h-auto absolute bottom-0 left-0`}
+          />
+          <Image
+            unoptimized
+            src={"/assets/images/a_planta.png"}
+            alt=""
+            width={0}
+            height={0}
+            className=" w-[20%] h-auto absolute top-0 right-0"
+          />
+        </div>
       </div>
     </>
   );

@@ -25,19 +25,19 @@ export default function Footer() {
                     </div>
                     <div className="w-full flex lg:grid lg:grid-cols-5 gap-x-5">
                         <div className="w-fit p-2 lg:p-0 lg:w-full h-full bg-white rounded-lg flex justify-center items-center">
-                            <FaFacebookF color="#1578BC" size={25} />
+                            <FaFacebookF color="black" size={25} />
                         </div>
                         <div className="w-fit p-2 lg:p-0 lg:w-full h-full bg-white rounded-lg flex justify-center items-center">
-                            <FaXTwitter color="#1578BC" size={25} />
+                            <FaXTwitter color="black" size={25} />
                         </div>
                         <div className="w-fit p-2 lg:p-0 lg:w-full h-full bg-white rounded-lg flex justify-center items-center">
-                            <FaInstagram color="#1578BC" size={25} />
+                            <FaInstagram color="black" size={25} />
                         </div>
                         <div className="w-fit p-2 lg:p-0 lg:w-full h-full bg-white rounded-lg flex justify-center items-center">
-                            <FaYoutube color="#1578BC" size={25} />
+                            <FaYoutube color="black" size={25} />
                         </div>
                         <div className="w-fit p-2 lg:p-0 lg:w-full h-full bg-white rounded-lg flex justify-center items-center">
-                            <FaWhatsapp color="#1578BC" size={25} />
+                            <FaWhatsapp color="black" size={25} />
                         </div>
                     </div>
                 </div>

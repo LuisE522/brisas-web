@@ -1,18 +1,21 @@
 "use client";
 
+import { PAGE_NAME } from "@/const";
+import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   evento: {
     imagen: string;
     color: string;
     btn_color: string;
+    nombre: string;
+    btn_inicio: string;
   };
 }
 
 export default function Evento({ evento }: Props) {
-  console.log(evento);
-
   return (
     <>
       <div
@@ -54,7 +57,7 @@ export default function Evento({ evento }: Props) {
             height={0}
             className="w-full h-auto"
           />
-          <div className="w-full flex flex-col gap-2 text-sm">
+          <div className="w-full flex flex-col gap-2 text-xs md:text-sm">
             <li>Público recomendado Adulto.</li>
             <li>
               Al momento del ingreso el cliente deberá portar mascarilla y
@@ -73,6 +76,13 @@ export default function Evento({ evento }: Props) {
           >
             Compra regular
           </button>
+
+          <Link href={'/'}
+            style={{ backgroundColor: "#" + evento.btn_inicio }}
+            className={` px-4 py-2.5 md:px-6 md:py-4 text-white rounded-full text-center`}
+          >
+            Inicio
+          </Link>
         </div>
         <div className="h-[100px]"></div>
       </div>

@@ -121,160 +121,160 @@ export default function Page1({ i_images, d_images }: Props) {
               : "transition-transform  duration-1000 scale-[130%]"
           } absolute -bottom-0 left-0`}
         />
-      </div>
-      {/* <div className="min-h-screen h-full lg:h-screen w-full bg-center bg-cover absolute top-0 left-0 z-50">
-        <div className="bg-black/60 h-full w-full absolute top-0 left-0 z-0"></div>
-        <div>
-          <Image
-            unoptimized
-            src={"/assets/images/i_humo.png"}
-            alt=""
-            width={0}
-            height={0}
-            className="w-full h-full absolute top-0 left-0"
-          />
-          <Image
-            unoptimized
-            src={"/assets/images/i_humo.png"}
-            alt=""
-            width={0}
-            height={0}
-            className="w-full h-full absolute top-0 left-0"
-          />
-          <Image
-            unoptimized
-            src={"/assets/images/d_humo.png"}
-            alt=""
-            width={0}
-            height={0}
-            className="w-full h-full absolute top-0 left-0"
-          />
-          <Image
-            unoptimized
-            src={"/assets/images/d_humo.png"}
-            alt=""
-            width={0}
-            height={0}
-            className="w-full h-full absolute top-0 left-0"
-          />
-        </div>
-
-        <div className="w-full h-screen flex flex-col gap-5 pb-4 relative lg:overflow-hidden">
-          <div className="w-full h-auto z-[9990]">
-            <NavOnlyLogo />
+        <div className="min-h-screen h-full lg:h-screen w-full bg-center bg-cover absolute top-0 left-0 z-50">
+          <div className="bg-black/60 h-full w-full absolute top-0 left-0 z-0"></div>
+          <div>
+            <Image
+              unoptimized
+              src={"/assets/images/i_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/i_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/d_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/d_humo.png"}
+              alt=""
+              width={0}
+              height={0}
+              className="w-full h-full absolute top-0 left-0"
+            />
           </div>
-          <div className="w-full h-[calc(100%-124px)] absolute top-[62px] left-0 z-10 flex flex-col gap-5">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full h-full lg:absolute ">
-              <div className="w-full max-h-full h-[600px]">
-                <CaroucelPeronsajes images={i_images} />
-              </div>
 
-              <div className="w-full h-full">
-                <div className="w-full h-full grid grid-rows-3 justify-around gap-5">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Image
-                      unoptimized
-                      src={`/assets/images/texto_home.png`}
-                      width={0}
-                      height={0}
-                      alt="Logo"
-                      className="h-[100px] w-auto "
-                    />
-                  </div>
+          <div className="w-full h-screen flex flex-col gap-5 pb-4 relative lg:overflow-hidden">
+            <div className="w-full h-auto z-[9990]">
+              <NavOnlyLogo />
+            </div>
+            <div className="w-full h-[calc(100%-124px)] absolute top-[62px] left-0 z-10 flex flex-col gap-5">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full h-full lg:absolute ">
+                <div className="w-full max-h-full h-[600px]">
+                  <CaroucelPeronsajes images={i_images} />
+                </div>
 
-                  <div className="w-full h-full grid grid-cols-2 gap-5">
-                    <div className="w-full h-full flex flex-col gap-3 justify-center items-center z-20">
-                      <div className="w-full h-[50px] sm:h-[60px] md:h-[80px] flex justify-center">
-                        <Image
-                          src={"/assets/images/logo_almuerzo_show.png"}
-                          unoptimized
-                          alt=""
-                          width={0}
-                          height={0}
-                          className="w-auto md:h-full"
-                        />
-                      </div>
-                      <Link
-                        href={"/evento/almuerzo-show"}
-                        className="z-[99999999] w-fit inline-flex items-center justify-center px-4 md:px-8 py-1 md:py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FF9900] hover:bg-[#FF9900] transition-all duration-300 rounded-full"
-                      >
-                        {translations[language].reservar}
-                      </Link>
+                <div className="w-full h-full">
+                  <div className="w-full h-full grid grid-rows-3 justify-around gap-5">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Image
+                        unoptimized
+                        src={`/assets/images/texto_home.png`}
+                        width={0}
+                        height={0}
+                        alt="Logo"
+                        className="h-[100px] w-auto "
+                      />
                     </div>
 
-                    <div className="w-full h-auto flex flex-col gap-3 justify-center items-center z-20">
-                      <div className="w-full h-[50px] sm:h-[60px] md:h-[80px] flex justify-center">
-                        <Image
-                          src={"/assets/images/logo_noches_de_folklore.png"}
-                          unoptimized
-                          alt=""
-                          width={0}
-                          height={0}
-                          className="w-auto h-full"
-                        />
-                      </div>
-                      <Link
-                        href={"/evento/noche-de-folklore"}
-                        className="z-[99999999]  w-fit inline-flex items-center justify-center px-4 md:px-8 py-1 md:py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FC228A] hover:bg-[#FC228A] transition-all duration-300 rounded-full"
-                      >
-                        {translations[language].reservar}
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="flex flex-col gap-2 mb-28">
-                      <p>¡Lo mejor del Perú en una sola velada!</p>
-                      <div className="w-full flex item justify-center gap-3">
+                    <div className="w-full h-full grid grid-cols-2 gap-5">
+                      <div className="w-full h-full flex flex-col gap-3 justify-center items-center z-20">
+                        <div className="w-full h-[50px] sm:h-[60px] md:h-[80px] flex justify-center">
+                          <Image
+                            src={"/assets/images/logo_almuerzo_show.png"}
+                            unoptimized
+                            alt=""
+                            width={0}
+                            height={0}
+                            className="w-auto md:h-full"
+                          />
+                        </div>
                         <Link
-                          href={"/info"}
-                          className="bg-white text-black w-fit px-5 py-2 rounded-lg text-sm"
+                          href={"/evento/almuerzo-show"}
+                          className="z-[99999999] w-fit inline-flex items-center justify-center px-4 md:px-8 py-1 md:py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FF9900] hover:bg-[#FF9900] transition-all duration-300 rounded-full"
                         >
-                          Ver mas
+                          {translations[language].reservar}
                         </Link>
+                      </div>
+
+                      <div className="w-full h-auto flex flex-col gap-3 justify-center items-center z-20">
+                        <div className="w-full h-[50px] sm:h-[60px] md:h-[80px] flex justify-center">
+                          <Image
+                            src={"/assets/images/logo_noches_de_folklore.png"}
+                            unoptimized
+                            alt=""
+                            width={0}
+                            height={0}
+                            className="w-auto h-full"
+                          />
+                        </div>
+                        <Link
+                          href={"/evento/noche-de-folklore"}
+                          className="z-[99999999]  w-fit inline-flex items-center justify-center px-4 md:px-8 py-1 md:py-2 font-sans font-semibold tracking-wide text-white bg-transparent border-2 border-[#FC228A] hover:bg-[#FC228A] transition-all duration-300 rounded-full"
+                        >
+                          {translations[language].reservar}
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="flex flex-col gap-2 mb-28">
+                        <p>¡Lo mejor del Perú en una sola velada!</p>
+                        <div className="w-full flex item justify-center gap-3">
+                          <Link
+                            href={"/info"}
+                            className="bg-white text-black w-fit px-5 py-2 rounded-lg text-sm"
+                          >
+                            Ver mas
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="w-full max-h-full h-[600px]">
-                <CaroucelPeronsajes images={d_images} />
+                <div className="w-full max-h-full h-[600px]">
+                  <CaroucelPeronsajes images={d_images} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="w-full h-full top-0 left-0 absolute ">
-          <Image
-            unoptimized
-            src={"/assets/images/d_planta.png"}
-            alt=""
-            width={0}
-            height={0}
-            className={`${
-              loadAnimation == false ? "divOnLoad" : "divOnLoad"
-            } h-auto absolute bottom-0 right-0`}
-          />
-          <Image
-            unoptimized
-            src={"/assets/images/d_planta.png"}
-            alt=""
-            width={0}
-            height={0}
-            className={`${
-              loadAnimation == false ? "divOnLoad" : "divOnLoad"
-            } scale-x-[-1] h-auto absolute bottom-0 left-0`}
-          />
-          <Image
-            unoptimized
-            src={"/assets/images/a_planta.png"}
-            alt=""
-            width={0}
-            height={0}
-            className=" w-[20%] h-auto absolute top-0 right-0"
-          />
+          <div className="w-full h-full top-0 left-0 absolute ">
+            <Image
+              unoptimized
+              src={"/assets/images/d_planta.png"}
+              alt=""
+              width={0}
+              height={0}
+              className={`${
+                loadAnimation == false ? "divOnLoad" : "divOnLoad"
+              } h-auto absolute bottom-0 right-0`}
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/d_planta.png"}
+              alt=""
+              width={0}
+              height={0}
+              className={`${
+                loadAnimation == false ? "divOnLoad" : "divOnLoad"
+              } scale-x-[-1] h-auto absolute bottom-0 left-0`}
+            />
+            <Image
+              unoptimized
+              src={"/assets/images/a_planta.png"}
+              alt=""
+              width={0}
+              height={0}
+              className=" w-[20%] h-auto absolute top-0 right-0"
+            />
+          </div>
         </div>
-      </div> */}
+      </div>
 
       {/* <div
         id="parallax-container"
